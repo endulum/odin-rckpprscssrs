@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(tweed.jpeg) repeat;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  gap: 15px;
+}
+
+.choices {
+  background: #333;
+  border: 5px solid white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  width: 30%;
+  display: grid;
+  grid-row-gap: 15px;
+}
+.choices button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  box-shadow: 6px 6px 6px -3px rgba(0, 0, 0, 0.25), -4px -4px 8px -3px rgba(255, 255, 255, 0.15);
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.05), transparent, rgba(0, 0, 0, 0.1));
+  border-radius: 20px;
+  color: white;
+}
+.choices button img {
+  max-height: 75px;
+  filter: invert(100%);
+}
+.choices button:active {
+  box-shadow: 6px 6px 6px -3px rgba(0, 0, 0, 0.25) inset, -4px -4px 8px -3px rgba(255, 255, 255, 0.15) inset;
+  background-image: linear-gradient(to top left, rgba(255, 255, 255, 0.05), transparent, rgba(0, 0, 0, 0.1));
+}/*# sourceMappingURL=style.css.map */

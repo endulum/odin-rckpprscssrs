@@ -37,3 +37,12 @@ function playRound(playerChoice, computerChoice) {
         };
     }
 }
+
+// to test ui
+
+document.getElementById('rock').addEventListener("click", () => 
+    console.log(playRound("rock", getRandomChoice())));
+document.getElementById('paper').addEventListener("click", () => 
+    console.log(playRound("paper", getRandomChoice())));
+document.getElementById('scissors').addEventListener("click", () => 
+    console.log(playRound("scissors", getRandomChoice())));
