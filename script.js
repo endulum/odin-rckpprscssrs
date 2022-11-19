@@ -16,7 +16,7 @@ function getRandomChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {return "It's a tie!"};
+    if (playerChoice === computerChoice) {return "No winners this time! It's a tie!"};
     switch (playerChoice) {
         case ("rock"): switch (computerChoice) {
             case ("paper"): 
@@ -85,14 +85,17 @@ function updateHand(choice) {
 function checkScore() {
     if (playerScore == 5 || computerScore == 5) {
         rock.removeEventListener("click", chooseRock);
+        rock.style.cursor = "not-allowed";
         paper.removeEventListener("click", choosePaper);
+        paper.style.cursor = "not-allowed";
         scissors.removeEventListener("click", chooseScissors);
+        scissors.style.cursor = "not-allowed";
         roundStatus.style.display = "block";
         gameEnded = true;
         if (playerScore == 5) {
-            roundStatus.textContent = "You won the game!";
+            roundStatus.textContent = "You won the game! Reset to play again.";
         } if (computerScore == 5) {
-            roundStatus.textContent = "You lost the game!";
+            roundStatus.textContent = "You lost the game! Reset to play again.";
         }
     }
 }
@@ -109,8 +112,11 @@ document.getElementById('reset').addEventListener('click', function() {
     computerHand.innerHTML = "<img src=\"resources/question-solid.svg\">";
     if (gameEnded == true) {
         document.getElementById('rock').addEventListener('click', chooseRock);
+        rock.style.cursor = "pointer";
         document.getElementById('paper').addEventListener('click', choosePaper);
+        paper.style.cursor = "pointer";
         document.getElementById('scissors').addEventListener('click', chooseScissors);
+        scissors.style.cursor = "pointer";
         gameEnded = false;
     }
 })

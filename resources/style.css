@@ -7,9 +7,10 @@
 }
 
 body {
-  background: url(tweed.jpeg) repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(pattern.png) repeat;
   height: 98vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -22,16 +23,17 @@ main {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 105px;
+  grid-template-columns: 1fr 90px;
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
 }
 
 .choices {
-  width: 105px;
+  width: 100%;
   grid-column: 2/3;
   grid-row: 1/2;
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr 40px;
   grid-row-gap: 15px;
 }
 .choices button {
@@ -45,15 +47,19 @@ main {
   color: white;
 }
 .choices button img {
-  max-height: 69px;
+  max-height: 60px;
   filter: invert(100%);
 }
 .choices button:active {
   box-shadow: 6px 6px 6px -3px rgba(0, 0, 0, 0.25) inset, -4px -4px 8px -3px rgba(255, 255, 255, 0.15) inset;
   background-image: linear-gradient(to top left, rgba(255, 255, 255, 0.05), transparent, rgba(0, 0, 0, 0.1));
 }
+.choices button:hover {
+  cursor: pointer;
+}
 
 #reset {
+  height: 40px;
   background-color: crimson;
   font-weight: bold;
 }
@@ -116,4 +122,18 @@ main {
 }
 .dialog small {
   font-size: 16px;
+}
+
+.cred {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+.cred p {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.cred a {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
