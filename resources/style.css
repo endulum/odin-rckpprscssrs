@@ -45,12 +45,17 @@ main {
   color: white;
 }
 .choices button img {
-  max-height: 75px;
+  max-height: 69px;
   filter: invert(100%);
 }
 .choices button:active {
   box-shadow: 6px 6px 6px -3px rgba(0, 0, 0, 0.25) inset, -4px -4px 8px -3px rgba(255, 255, 255, 0.15) inset;
   background-image: linear-gradient(to top left, rgba(255, 255, 255, 0.05), transparent, rgba(0, 0, 0, 0.1));
+}
+
+#reset {
+  background-color: crimson;
+  font-weight: bold;
 }
 
 .screen {
